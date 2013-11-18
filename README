@@ -1,2 +1,5 @@
 This is educational sketch for CRUD Java SE application. 
 It uses some techs from jdbc, socket serialization and SWING
+
+The JDBC driver used is H2 Java SQL Database (
+http://h2database.com)

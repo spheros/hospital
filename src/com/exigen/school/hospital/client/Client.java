@@ -18,7 +18,7 @@ public class Client {
                 //Turn off metal's use of bold fonts
                 UIManager.put("swing.boldMetal", Boolean.FALSE);
                 try {
-                    new MainWindow("Masha");
+                    new MainWindow("Hospital");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

@@ -31,13 +31,19 @@ public class MainWindow extends JFrame implements JdbcConfig, ActionListener, Gu
         super(title);
         WebLookAndFeel.install();
 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        URL iconUrl = getClass().getResource("images/hospital.png");
+        ImageIcon imageIcon = new ImageIcon(iconUrl);
+        setIconImage(imageIcon.getImage());
+        setIconImage(null);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         initMainPanel();
         add(mainPanel);
         setSize(MAIN_WINDOW_DIMENSION);
         setLocationRelativeTo(null);
         setVisible(true);
     }
+
+
 
     private void initMainPanel() {
         initPane();
@@ -63,7 +69,7 @@ public class MainWindow extends JFrame implements JdbcConfig, ActionListener, Gu
     }
 
     private void addButtons(JToolBar toolBar) {
-        JButton button = null;
+        JButton button;
 
 
         button = makeNavigationButton("database_connect.png", "network",
@@ -149,9 +155,9 @@ public class MainWindow extends JFrame implements JdbcConfig, ActionListener, Gu
 
 
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("network")) {
+        /*if (e.getActionCommand().equals("network")) {
 
-        }
+        }*/
 
         if (e.getActionCommand().equals("search")) {
             new SearchDialog(this);

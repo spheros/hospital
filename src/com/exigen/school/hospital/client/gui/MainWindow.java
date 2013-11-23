@@ -34,7 +34,6 @@ public class MainWindow extends JFrame implements JdbcConfig, ActionListener, Gu
         URL iconUrl = getClass().getResource("images/hospital.png");
         ImageIcon imageIcon = new ImageIcon(iconUrl);
         setIconImage(imageIcon.getImage());
-        setIconImage(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         initMainPanel();
         add(mainPanel);
